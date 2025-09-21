@@ -23,6 +23,9 @@
     .dark-mode .latest-wheels-heading {
         color: #ffffff !important;
     }
+    #theme-toggle .moon-icon svg {
+        fill: gray;
+    }
     #theme-toggle .sun-icon, .dark-mode #theme-toggle .moon-icon {
         display: none;
     }
@@ -38,7 +41,7 @@
         top: 50%;
         left: 50%;
         width: 200%; /* Increase size to hide YouTube UI */
-        height: 300%; /* Increase size to hide YouTube UI */
+        height: 400%; /* Increase size to hide YouTube UI */
         transform: translate(-50%, -50%);
         z-index: 0;
     }
@@ -46,8 +49,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 200%;
-        height: 300%;
+        width: 300%;
+        height: 400%;
         z-index: 1;
     }
 </style>
@@ -61,14 +64,34 @@
         <a class="navbar-brand" href="#">
             <img src="super-car-logo.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#newsMenu" aria-controls="newsMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#newsMenu" aria-controls="newsMenu"
+        aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+<!--Menu items-->
         <div class="collapse navbar-collapse" id="newsMenu">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="#">Home</a>
-                <a class="nav-item nav-link" href="#">About</a>
-                <a class="nav-item nav-link" href="#">Contact us</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Car Leasing</a>
+                        <a class="dropdown-item" href="#">Car Insurance</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#"id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Contact us</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">+371 12345678</a>
+                        <a class="dropdown-item" href="#">support@gmail.com</a>
+                    </div>
+                </li>
+
+<!--Change Theme On Site-->
                 <button id="theme-toggle" class="ml-2" style="background: none; border: none; padding: 0; cursor: pointer;">
                     <span class="moon-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" class="bi bi-moon-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/></svg>
@@ -80,6 +103,9 @@
             </div>
         </div>
     </nav>
+    </div>
+
+<div class="container">
 <!--Welcome block-->
     <div class="row">
         <div class="col-md-12">
@@ -94,7 +120,7 @@
                         <footer class="blockquote-footer">Lewis Hamilton</footer>
                     </blockquote>
                     <hr class="my-4">
-                    <a href="#signin-form" class="btn btn-warning">Sign Up</a>
+                    <a href="#h3" class="btn btn-warning">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -209,12 +235,12 @@
         </div>
 </div>
 
-<div class="row">
         <hr class="my-4">
-
-    <div class="container" id="signin-form">
+<!--Registration Form-->
+    <h3 class="text-center" id="h3">Sign Up</h3>
+        <div class="container">
     <div class="row justify-content-center text-center">
-        <div class="col-md-3">
+        <div class="col-md-3 mt-3">
             <form>
                 <div class="form-group">
                     <label for="FirstName">First name</label>
@@ -225,17 +251,6 @@
                     <input type="text" class="form-control" id="LastName" placeholder="Last name">
                 </div>
                 <div class="form-group">
-                    <label for="radio">Gender</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1">
-                    <label class="form-check-label" for="radioid1">Male</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
-                    <label class="form-check-label" for="radioid2">Female</label>
-                </div>
-                <div class="form-group mt-3">
                     <label>Country</label>
                     <select class="form-control" id="Country">
                         <option>Select country</option>
@@ -277,8 +292,11 @@
         </div>
 </div>
 </div>
-            </div>
-    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
