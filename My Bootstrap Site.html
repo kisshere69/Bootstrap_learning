@@ -7,6 +7,50 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="MB inner page 1.html">
+<link rel="stylesheet" href="MB inner page 2.html">
+<style>
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    body.dark-mode .text-muted {
+        color: #ffffff !important; /* Ensure muted text is visible in dark mode */
+    }
+    .dark-mode .jumbotron {
+        background-color: #000000 !important;
+    }
+    .dark-mode .latest-wheels-heading {
+        color: #ffffff !important;
+    }
+    #theme-toggle .sun-icon, .dark-mode #theme-toggle .moon-icon {
+        display: none;
+    }
+    .dark-mode #theme-toggle .sun-icon {
+        display: inline-block;
+    }
+    .jumbotron-video-bg {
+        position: relative;
+        overflow: hidden;
+    }
+    .jumbotron-video-bg iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200%; /* Increase size to hide YouTube UI */
+        height: 300%; /* Increase size to hide YouTube UI */
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 300%;
+        z-index: 1;
+    }
+</style>
 </head>
 
 <body>
@@ -14,6 +58,243 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+<!--Menu-->
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="super-car-logo.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="newsMenu" aria-expanded="false" data-target="#newsMenu" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="newsMenu">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Contact us</a>
+                <button id="theme-toggle" class="ml-2" style="background: none; border: none; padding: 0; cursor: pointer;">
+                    <span class="moon-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" class="bi bi-moon-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/></svg>
+                    </span>
+                    <span class="sun-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" class="bi bi-sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+<!--Welcome block-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron text-white jumbotron-video-bg">
+                <iframe src="https://www.youtube.com/embed/YAFUyPp_238?autoplay=1&mute=1&loop=1&playlist=YAFUyPp_238&controls=0&showinfo=0&autohide=1" 
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="video-overlay"></div>
+                <div style="position: relative; z-index: 2;" class="text-center">
+                    <h2 class="display-3">Drive Smart, Pay Less!</h2>
+                    <blockquote class="blockquote">
+                        <p>“The way I drive, the way I handle a car, is an expression of my inner feelings.”</p>
+                        <footer class="blockquote-footer">Lewis Hamilton</footer>
+                    </blockquote>
+                    <hr class="my-4">
+                    <a href="#signin-form" class="btn btn-warning">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+<!--Latest wheels-->
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center latest-wheels-heading">Latest wheels</h4>
+                <hr class="my-4">
+            </div>
+        </div>
+        <div class="row">
+<!--Jeep-->
+                <div class="col-md-4 col-sm-6 col-s-12">
+                <div class="card-body">
+                    <div class="card" style="width: 20rem">
+        <a href="https://percunbrauc.lv/cars/jeep-grand-cherokee-2/">
+    <img class="card-img-top" src="https://latfinance.lv/wp-content/uploads/2025/09/DSC1474.jpg" height="250" ></a>
+    </div>
+                <h5 class="card-title">Jeep Grand Cherokee
+                    <span class="badge badge-danger bg-danger">New</span>
+                </h5>
+            <h6 class="card-subtitle mb-2 text-muted">$9590</h6>
+            <a class="btn btn-success" type="button" href="https://percunbrauc.lv/cars/jeep-grand-cherokee-2/" 
+            target="_blank">See more</a>
+            </div>
+                </div>
+<!--Toyota-->
+                    <div class="col-md-4 col-sm-6 col-s-12">
+                <div class="card-body">
+                    <div class="card" style="width: 20rem">
+        <a href="https://percunbrauc.lv/cars/toyota-c-hr-awd/">
+    <img class="card-img-top" src="https://latfinance.lv/wp-content/uploads/2025/07/DSC9168-Edit.jpg" height="250" ></a>
+    </div>
+                <h5 class="card-title">Toyota C-HR AWD
+                    <span class="badge badge-danger bg-danger">New</span>
+                </h5>
+            <h6 class="card-subtitle mb-2 text-muted">$15390</h6>
+            <a class="btn btn-success" type="button" href="https://percunbrauc.lv/cars/toyota-c-hr-awd/" target="_blank">See more</a>
+            </div>
+                </div>
+<!--BMW-->
+                    <div class="col-md-4 col-sm-6 col-s-12">
+                <div class="card-body">
+                    <div class="card" style="width: 20rem">
+        <a href="https://percunbrauc.lv/cars/bmw-gt-320d-xdrive-m-pack/">
+    <img class="card-img-top" src="https://latfinance.lv/wp-content/uploads/2025/07/DSC7917.jpg" height="250" ></a>
+    </div>
+                <h5 class="card-title">BMW GT 320D XDRIVE M-PACK</h5>
+            <h6 class="card-subtitle mb-2 text-muted">$16790</h6>
+            <a class="btn btn-success" type="button" href="https://percunbrauc.lv/cars/bmw-gt-320d-xdrive-m-pack/"target="_blank">See more</a>
+            </div>
+                </div>
+            </div>
+
+<div class="row">
+        <hr class="my-4">
+    <div class="col-md-4">
+        <img src="https://plus.unsplash.com/premium_photo-1661277663422-26a6fe569350?q=80&w=1740&auto=
+        format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <div class="row1">
+                <div class="col-md-12">
+                    <h1>Have doubts selecting a car?</h1>
+                </div>
+            </div>
+            
+            <div class="row2">
+                <div class="col-md-12">
+                    <p>We know, it's hard to choose one. Therefore, our specialists will look for the car you deserve!
+                        We promise you will not get away from us on your two.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row3">
+            <div class="col-md-12">
+                <a href="MB inner page 1.html" type="button" class="btn btn-info">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+            <hr class="my-4">
+
+        <div class="col-md-8">
+            <div class="row1">
+                <div class="col-md-12">
+                    <h1>Can't afford buying a car?</h1>
+                </div>
+            </div>
+            
+            <div class="row2">
+                <div class="col-md-12">
+                    <p>Leave it to the professionals. We will make a personal loan plan,
+                        so you can rest and drink coffee on a comfortable couch while our specialists make magic!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row3">
+            <div class="col-md-12">
+                <a href="MB inner page 2.html" type="button" class="btn btn-info">Read More</a>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-4">
+        <img src="https://plus.unsplash.com/premium_photo-1661277774967-7e1ed4df6c3d?q=80&w=1740&auto=
+        format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid">
+        </div>
+</div>
+
+<div class="row">
+        <hr class="my-4">
+
+    <div class="container" id="signin-form">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-3">
+            <form>
+                <div class="form-group">
+                    <label for="FirstName">First name</label>
+                    <input type="text" class="form-control" id="FirstName" placeholder="First name">
+                </div>
+                <div class="form-group">
+                    <label for="LastName">Last name</label>
+                    <input type="text" class="form-control" id="LastName" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                    <label for="radio">Gender</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1">
+                    <label class="form-check-label" for="radioid1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
+                    <label class="form-check-label" for="radioid2">Female</label>
+                </div>
+                <div class="form-group mt-3">
+                    <label>Country</label>
+                    <select class="form-control" id="Country">
+                        <option>Select country</option>
+                        <option>Germany</option>
+                        <option>Italy</option>
+                        <option>Spain</option>
+                        <option>France</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="EmailAddress">Email address</label>
+                    <input type="email" class="form-control" id="EmailAddress" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="ConfirmPassword">Confirm password</label>
+                    <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm password">
+                </div>
+                <div class="form-group">
+                    <label for="Textarea">Address</label>
+                    <textarea class="form-control" id="Textarea" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="form-check-input" type="checkbox" id="Terms">
+                    <label class="form-check-label" for="Terms">I agree to the Terms and Conditions</label>
+                </div>
+                <div class="form-group">
+                    <input class="form-check-input" type="checkbox" id="Advertisement">
+                    <label class="form-check-label" for="Terms">I agree to provide my email to the company for Advertisement and Product updates</label>
+                </div>
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </div>
+</div>
+</div>
+            </div>
+    </div>
+
+<script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        const body = document.body;
+        const nav = document.querySelector('.navbar');
+        body.classList.toggle('dark-mode');
+
+        nav.classList.toggle('navbar-light');
+        nav.classList.toggle('navbar-dark');
+        nav.classList.toggle('bg-white');
+        nav.classList.toggle('bg-dark');
+    });
+</script>
 
 </body>
 </html>
