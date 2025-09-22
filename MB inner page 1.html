@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
     
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,7 +48,16 @@
         <div class="collapse navbar-collapse" id="newsMenu">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="My Bootstrap Site.html">Home</a>
-                <a class="nav-item nav-link" href="#">About</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-target="#newsMenu"
+                    aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="MB inner page 2.html">Car Leasing</a>
+                        <a class="dropdown-item" href="MB inner page 1.html">Car Selection</a>
+                    </div>
+                </li>
                 <a class="nav-item nav-link" href="#">Contact us</a>
                  <button id="theme-toggle" class="ml-2" style="background: none; border: none; padding: 0; cursor: pointer;">
                     <span class="moon-icon">
@@ -59,8 +68,10 @@
                     </span>
                 </button>
             </div>
-        </div>
-    </nav>
+            </div>
+             </nav>
+    
+   
     <div class="row">
         <div class="col-md-3">
             <ul class="nav flex-column">
