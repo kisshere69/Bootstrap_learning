@@ -1,40 +1,39 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="My Bootstrap Site.html">
-<link rel="stylesheet" href="MB inner page 1.html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-<style>
-    body.dark-mode {
-        background-color: #121212;
-        color: #ffffff;
-    }
-    body.dark-mode .text-muted {
-        color: #ffffff !important; /* Ensure muted text is visible in dark mode */
-    }
-    .dark-mode .jumbotron {
-        background-color: #000000 !important;
-    }
-    .dark-mode .latest-wheels-heading {
-        color: #ffffff !important;
-    }
-    #theme-toggle .moon-icon svg {
-        fill: gray;
-    }
-    #theme-toggle .sun-icon, .dark-mode #theme-toggle .moon-icon {
-        display: none;
-    }
-    .dark-mode #theme-toggle .sun-icon {
-        display: inline-block;
-    }
-</style>
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.dark-mode .text-muted {
+            color: #ffffff !important;
+        }
+        .dark-mode .jumbotron {
+            background-color: #000000 !important;
+        }
+        .dark-mode .latest-wheels-heading {
+            color: #ffffff !important;
+        }
+        #theme-toggle .moon-icon svg {
+            fill: gray;
+        }
+        #theme-toggle .sun-icon, .dark-mode #theme-toggle .moon-icon {
+            display: none;
+        }
+        .dark-mode #theme-toggle .sun-icon {
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <a class="navbar-brand" href="My Bootstrap Site.html">
             <img src="super-car-logo.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top">
@@ -47,25 +46,22 @@
                 <a class="nav-item nav-link" href="My Bootstrap Site.html">Home</a>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-target="#newsMenu"
-                    aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
+                       aria-haspopup="true" aria-expanded="false">Services</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="MB inner page 2.html">Car Leasing</a>
                         <a class="dropdown-item" href="MB inner page 1.html">Car Selection</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#"id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-target="#newsMenu"
-                    aria-haspopup="true" aria-expanded="false">Contact us</a>
+                    <a class="nav-link dropdown-toggle" href="#"id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-target="#newsMenu"
+                       aria-haspopup="true" aria-expanded="false">Contact us</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">+371 12345678</a>
                         <a class="dropdown-item" href="#">support@gmail.com</a>
                     </div>
                 </li>
 
-
-                        <button id="theme-toggle" class="ml-2" style="background: none; border: none; padding: 0; cursor: pointer;">
+                <button id="theme-toggle" class="ml-2" style="background: none; border: none; padding: 0; cursor: pointer;">
                     <span class="moon-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" class="bi bi-moon-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/></svg>
                     </span>
@@ -76,7 +72,9 @@
             </div>
         </div>
     </nav>
-        <div class="row">
+
+    <!-- Page Content -->
+    <div class="row">
         <div class="col-md-3">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -89,40 +87,60 @@
         </div>
         
         <div class="col-md-9">
-                  <div class="row">
-            <div class="col-md-12">
-                <img class="img-fluid" src="https://plus.unsplash.com/premium_photo-1661405668601-fa0764ea03f1?q=80&w=
-                2062&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-                <div class="row1 mt-4">
-                    <div class="col-md-10">
-                        <h2>Can't afford buying a car?</h2>
-                        <p>
-                            Dreaming of owning a car but worried about the price? You’re not alone. Many people hesitate when it comes to buying
-                             a car because of the financial commitment. B
-                            ut the truth is — owning a reliable vehicle doesn’t have to be out of reach.
-                        </p>
-                        <h4>
-                            How We Can Help</h4>
-                        <p>
-                            • Loan Assistance – We’ll help you explore financing options that fit your budget.<br>
-                            • Personalized Solutions – Every customer’s situation is unique, so we work to find the most suitable loan case for you.<br>
-                            • Fast and Transparent Process – No hidden costs, no unnecessary delays.
-                        </p>
-                        <h4>What This Means for You</h4>
-                        <p>
-                        • You can choose the car you really want, not just the one you can pay for in cash today.<br>
-                        • Monthly payments that fit your lifestyle.<br>
-                        • Peace of mind knowing professionals are handling your financing.
-                        </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-fluid" src="https://plus.unsplash.com/premium_photo-1661405668601-fa0764ea03f1?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Car leasing">
+                    <div class="row1 mt-4">
+                        <div class="col-md-10">
+                            <h2>Can't afford buying a car?</h2>
+                            <p>
+                                Dreaming of owning a car but worried about the price? You’re not alone. Many people hesitate when it comes to buying
+                                a car because of the financial commitment. But the truth is — owning a reliable vehicle doesn’t have to be out of reach.
+                            </p>
+                            <h4>How We Can Help</h4>
+                            <p>
+                                • Loan Assistance – We’ll help you explore financing options that fit your budget.<br>
+                                • Personalized Solutions – Every customer’s situation is unique, so we work to find the most suitable loan case for you.<br>
+                                • Fast and Transparent Process – No hidden costs, no unnecessary delays.
+                            </p>
+                            <h4>What This Means for You</h4>
+                            <p>
+                                • You can choose the car you really want, not just the one you can pay for in cash today.<br>
+                                • Monthly payments that fit your lifestyle.<br>
+                                • Peace of mind knowing professionals are handling your financing.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
+    </div>
+
 </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+
+<!-- Pop-up Modal -->
+<div class="modal fade" id="specialOfferModal" tabindex="-1" aria-labelledby="specialOfferLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100" id="specialOfferLabel">🎉 Special Offer for You</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">First month with <b>0% interest</b> on leasing!</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Dark mode toggle
     document.getElementById('theme-toggle').addEventListener('click', function() {
         const body = document.body;
         const nav = document.querySelector('.navbar');
@@ -133,6 +151,15 @@
         nav.classList.toggle('bg-white');
         nav.classList.toggle('bg-dark');
     });
+
+    // Auto show modal after 1s
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function(){
+            var myModal = new bootstrap.Modal(document.getElementById('specialOfferModal'));
+            myModal.show();
+        }, 1000);
+    });
 </script>
+
 </body>
 </html>
