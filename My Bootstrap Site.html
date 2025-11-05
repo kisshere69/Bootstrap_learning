@@ -82,7 +82,6 @@
         background-color: #3b4045; /* Slightly lighter background on hover */
     }
 
-
     #theme-toggle .moon-icon svg {
         fill: gray;
     }
@@ -96,12 +95,12 @@
         position: relative;
         overflow: hidden;
     }
-    .jumbotron-video-bg iframe {
+    .jumbotron-video-bg video {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 200%; 
-        height: 400%; 
+        min-width: 100%;
+        min-height: 100%;
         transform: translate(-50%, -50%);
         z-index: 0;
     }
@@ -109,8 +108,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 300%;
-        height: 400%;
+        width: 100%;
+        height: 100%;
         z-index: 1;
     }
     .carousel-item img {
@@ -183,8 +182,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="jumbotron text-white jumbotron-video-bg">
-                <iframe src="https://www.youtube.com/embed/YAFUyPp_238?autoplay=1&mute=1&loop=1&playlist=YAFUyPp_238&controls=0&showinfo=0&autohide=1" 
-                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <video src="88481-606110665.mp4" autoplay loop muted playsinline></video>
                 <div class="video-overlay"></div>
                 <div style="position: relative; z-index: 2;" class="text-center">
                     <h2 class="display-3">Drive Smart, Pay Less!</h2>
